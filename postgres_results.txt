@@ -1,0 +1,90 @@
+Wersja PostgreSQL: ('PostgreSQL 17.2 on x86_64-windows, compiled by msvc-19.42.34435, 64-bit',)
+multiplier:  1
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  0.17215657234191895
+{'historia': 300, 'obiekt_geograficzny': 150, 'sektor': 4, 'pogoda': 80}
+query:  SELECT czas_pomiaru FROM pogoda WHERE skala_beauforta>3 ORDER BY skala_beauforta DESC;
+select time elapsed:  0.0010006427764892578 results count:  46  first three:
+[(datetime.datetime(2025, 1, 3, 20, 13, 33),), (datetime.datetime(2025, 1, 1, 4, 14, 12),), (datetime.datetime(2025, 1, 4, 21, 54, 2),)]
+
+query:  SELECT pogoda.typ_pogody, pogoda.czas_pomiaru, obiekt_geograficzny.typ_obiektu FROM obiekt_geograficzny INNER JOIN pogoda ON pogoda.fk_sektor=obiekt_geograficzny.fk_sektor 
+select time elapsed:  0.0020024776458740234 results count:  2980  first three:
+[('całkowite zachmurzenie', datetime.datetime(2025, 1, 4, 2, 51, 43), 'mina morska'), ('całkowite zachmurzenie', datetime.datetime(2025, 1, 4, 2, 51, 43), 'wrak'), ('całkowite zachmurzenie', datetime.datetime(2025, 1, 4, 2, 51, 43), 'znak wodny')]
+
+query:  UPDATE obiekt_geograficzny SET promien=3 WHERE typ_obiektu='latarnia'
+update time elapsed:  0.002001047134399414 results count:  33
+
+delete time elapsed:  0.002001523971557617
+dropped tables
+
+multiplier:  10
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  1.756596565246582
+{'historia': 3000, 'obiekt_geograficzny': 1500, 'sektor': 40, 'pogoda': 800}
+query:  SELECT czas_pomiaru FROM pogoda WHERE skala_beauforta>3 ORDER BY skala_beauforta DESC;
+select time elapsed:  0.0 results count:  491  first three:
+[(datetime.datetime(2025, 1, 5, 19, 5, 48),), (datetime.datetime(2025, 1, 3, 20, 59, 39),), (datetime.datetime(2025, 1, 2, 4, 44, 39),)]
+
+query:  SELECT pogoda.typ_pogody, pogoda.czas_pomiaru, obiekt_geograficzny.typ_obiektu FROM obiekt_geograficzny INNER JOIN pogoda ON pogoda.fk_sektor=obiekt_geograficzny.fk_sektor 
+select time elapsed:  0.01501321792602539 results count:  29871  first three:
+[('deszcz', datetime.datetime(2025, 1, 5, 1, 36, 53), 'wrak'), ('całkowite zachmurzenie', datetime.datetime(2025, 1, 2, 16, 39, 56), 'wrak'), ('częściowe zachmurzenie', datetime.datetime(2025, 1, 1, 22, 30, 36), 'wrak')]
+
+query:  UPDATE obiekt_geograficzny SET promien=3 WHERE typ_obiektu='latarnia'
+update time elapsed:  0.0030024051666259766 results count:  282
+
+delete time elapsed:  0.010010004043579102
+dropped tables
+
+multiplier:  100
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  17.773357152938843
+{'historia': 30000, 'obiekt_geograficzny': 15000, 'sektor': 400, 'pogoda': 8000}
+query:  SELECT czas_pomiaru FROM pogoda WHERE skala_beauforta>3 ORDER BY skala_beauforta DESC;
+select time elapsed:  0.0020017623901367188 results count:  4730  first three:
+[(datetime.datetime(2025, 1, 4, 4, 58, 47),), (datetime.datetime(2025, 1, 5, 11, 41, 43),), (datetime.datetime(2025, 1, 1, 4, 48, 10),)]
+
+query:  SELECT pogoda.typ_pogody, pogoda.czas_pomiaru, obiekt_geograficzny.typ_obiektu FROM obiekt_geograficzny INNER JOIN pogoda ON pogoda.fk_sektor=obiekt_geograficzny.fk_sektor
+select time elapsed:  0.14413070678710938 results count:  299734  first three:
+[('całkowite zachmurzenie', datetime.datetime(2025, 1, 2, 18, 21, 53), 'latarnia'), ('całkowite zachmurzenie', datetime.datetime(2025, 1, 2, 18, 21, 53), 'wrak'), ('całkowite zachmurzenie', datetime.datetime(2025, 1, 2, 18, 21, 53), 'wrak')]
+
+query:  UPDATE obiekt_geograficzny SET promien=3 WHERE typ_obiektu='latarnia'
+update time elapsed:  0.023022174835205078 results count:  2503
+
+delete time elapsed:  0.3092808723449707
+dropped tables
+
+multiplier:  1000
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  166.07996892929077
+{'historia': 300000, 'obiekt_geograficzny': 150000, 'sektor': 4000, 'pogoda': 80000}
+query:  SELECT czas_pomiaru FROM pogoda WHERE skala_beauforta>3 ORDER BY skala_beauforta DESC;
+select time elapsed:  0.023021697998046875 results count:  47920  first three:
+[(datetime.datetime(2025, 1, 3, 16, 50, 36),), (datetime.datetime(2025, 1, 1, 20, 31, 5),), (datetime.datetime(2025, 1, 1, 0, 44, 19),)]
+
+query:  SELECT pogoda.typ_pogody, pogoda.czas_pomiaru, obiekt_geograficzny.typ_obiektu FROM obiekt_geograficzny INNER JOIN pogoda ON pogoda.fk_sektor=obiekt_geograficzny.fk_sektor
+select time elapsed:  1.5444035530090332 results count:  3000687  first three:
+[('bezchmurnie', datetime.datetime(2025, 1, 2, 8, 32, 18), 'latarnia'), ('bezchmurnie', datetime.datetime(2025, 1, 2, 8, 32, 18), 'wrak'), ('bezchmurnie', datetime.datetime(2025, 1, 2, 8, 32, 18), 'latarnia')]
+
+query:  UPDATE obiekt_geograficzny SET promien=3 WHERE typ_obiektu='latarnia'
+update time elapsed:  0.23821687698364258 results count:  25014
+
+delete time elapsed:  32.752772092819214
+dropped tables
+
+multiplier:  3000
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  501.92562198638916
+{'historia': 900000, 'obiekt_geograficzny': 450000, 'sektor': 12000, 'pogoda': 240000}
+query:  SELECT czas_pomiaru FROM pogoda WHERE skala_beauforta>3 ORDER BY skala_beauforta DESC;
+select time elapsed:  0.08107399940490723 results count:  143830  first three:
+[(datetime.datetime(2025, 1, 3, 13, 45, 6),), (datetime.datetime(2025, 1, 1, 15, 40, 5),), (datetime.datetime(2025, 1, 4, 7, 35, 3),)]
+
+query:  SELECT pogoda.typ_pogody, pogoda.czas_pomiaru, obiekt_geograficzny.typ_obiektu FROM obiekt_geograficzny INNER JOIN pogoda ON pogoda.fk_sektor=obiekt_geograficzny.fk_sektor
+select time elapsed:  4.467060804367065 results count:  9003294  first three:
+[('sztorm', datetime.datetime(2025, 1, 6, 13, 24, 44), 'znak wodny'), ('bezchmurnie', datetime.datetime(2025, 1, 2, 14, 15, 52), 'znak wodny'), ('deszcz', datetime.datetime(2025, 1, 5, 6, 34, 11), 'znak wodny')]
+
+query:  UPDATE obiekt_geograficzny SET promien=3 WHERE typ_obiektu='latarnia'
+update time elapsed:  1.0089170932769775 results count:  75043
+
+delete time elapsed:  289.42208790779114
+dropped tables

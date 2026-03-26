@@ -1,0 +1,121 @@
+connecting to Mongo
+['ZTBD', 'admin', 'config', 'local']
+mongdodb multiplier:  1
+{'historia': 0, 'obiekt_geograficzny': 150, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  0.13712477684020996
+{'historia': 300, 'obiekt_geograficzny': 150, 'sektor': 4, 'pogoda': 80}
+
+find from pogoda time elapsed:  0.0010018348693847656
+first 3 documents:
+{'czas_pomiaru': datetime.datetime(2025, 1, 6, 2, 23, 33)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 2, 22, 2, 4)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 2, 2, 12, 41)}
+
+aggregation query time:  0.013011455535888672
+first 3 documents:
+{'_id': ObjectId('678ab4f6007046c547299375'), 'typ_pogody': 'bezchmurnie', 'typ_obiektu': 'trzęsawisko'}
+{'_id': ObjectId('678ab4f6007046c547299375'), 'typ_pogody': 'deszcz', 'typ_obiektu': 'trzęsawisko'}
+{'_id': ObjectId('678ab4f6007046c547299375'), 'typ_pogody': 'sztorm', 'typ_obiektu': 'trzęsawisko'}
+
+update query time:  0.001001119613647461
+affected documents count:
+UpdateResult({'n': 19, 'nModified': 0, 'ok': 1.0, 'updatedExisting': True}, acknowledged=True)
+0
+
+delete time elapsed:  0.006005525588989258
+
+mongdodb multiplier:  10
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  1.3412201404571533
+{'historia': 3000, 'obiekt_geograficzny': 1500, 'sektor': 40, 'pogoda': 800}
+
+find from pogoda time elapsed:  0.0
+first 3 documents:
+{'czas_pomiaru': datetime.datetime(2025, 1, 4, 17, 26, 57)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 1, 7, 53, 27)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 6, 8, 59, 20)}
+
+aggregation query time:  0.005006313323974609
+first 3 documents:
+{'_id': ObjectId('678ab50f682da411b376ab4e'), 'typ_pogody': 'deszcz', 'typ_obiektu': 'znak wodny'}
+{'_id': ObjectId('678ab50f682da411b376ab4e'), 'typ_pogody': 'częściowe zachmurzenie', 'typ_obiektu': 'znak wodny'}
+{'_id': ObjectId('678ab50f682da411b376ab4e'), 'typ_pogody': 'całkowite zachmurzenie', 'typ_obiektu': 'znak wodny'}
+
+update query time:  0.006006956100463867
+affected documents count:
+UpdateResult({'n': 256, 'nModified': 256, 'ok': 1.0, 'updatedExisting': True}, acknowledged=True)
+256
+
+delete time elapsed:  0.03503060340881348
+
+mongdodb multiplier:  100
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  15.805569171905518
+{'historia': 30000, 'obiekt_geograficzny': 15000, 'sektor': 400, 'pogoda': 8000}
+
+find from pogoda time elapsed:  0.0
+first 3 documents:
+{'czas_pomiaru': datetime.datetime(2025, 1, 1, 19, 38, 16)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 6, 2, 24, 55)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 6, 15, 59, 3)}
+
+aggregation query time:  0.022019624710083008
+first 3 documents:
+{'_id': ObjectId('678ab519682da411b3772b0a'), 'typ_pogody': 'deszcz', 'typ_obiektu': 'trzęsawisko'}
+{'_id': ObjectId('678ab519682da411b3772b0a'), 'typ_pogody': 'deszcz', 'typ_obiektu': 'trzęsawisko'}
+{'_id': ObjectId('678ab519682da411b3772b0a'), 'typ_pogody': 'częściowe zachmurzenie', 'typ_obiektu': 'trzęsawisko'}
+
+update query time:  0.03803396224975586
+affected documents count:
+UpdateResult({'n': 2452, 'nModified': 2452, 'ok': 1.0, 'updatedExisting': True}, acknowledged=True)
+2452
+
+delete time elapsed:  0.28625941276550293
+
+mongdodb multiplier:  1000
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  144.8656837940216
+{'historia': 300000, 'obiekt_geograficzny': 150000, 'sektor': 4000, 'pogoda': 80000}
+
+find from pogoda time elapsed:  0.0
+first 3 documents:
+{'czas_pomiaru': datetime.datetime(2025, 1, 1, 17, 52, 25)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 2, 6, 43, 18)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 4, 15, 24, 39)}
+
+aggregation query time:  0.2602367401123047
+first 3 documents:
+{'_id': ObjectId('678ab572682da411b37c2862'), 'typ_pogody': 'sztorm', 'typ_obiektu': 'trzęsawisko'}
+{'_id': ObjectId('678ab572682da411b37c2862'), 'typ_pogody': 'deszcz', 'typ_obiektu': 'trzęsawisko'}
+{'_id': ObjectId('678ab572682da411b37c2862'), 'typ_pogody': 'całkowite zachmurzenie', 'typ_obiektu': 'trzęsawisko'}
+
+update query time:  0.38234782218933105
+affected documents count:
+UpdateResult({'n': 25223, 'nModified': 25223, 'ok': 1.0, 'updatedExisting': True}, acknowledged=True)
+25223
+
+delete time elapsed:  3.1068246364593506
+
+mongdodb multiplier:  3000
+{'historia': 0, 'obiekt_geograficzny': 0, 'sektor': 0, 'pogoda': 0}
+insert time elapsed:  438.3518326282501
+{'historia': 900000, 'obiekt_geograficzny': 450000, 'sektor': 12000, 'pogoda': 240000}
+
+find from pogoda time elapsed:  0.0
+first 3 documents:
+{'czas_pomiaru': datetime.datetime(2025, 1, 6, 3, 11, 47)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 3, 16, 55, 57)}
+{'czas_pomiaru': datetime.datetime(2025, 1, 5, 17, 15, 42)}
+
+aggregation query time:  0.6475889682769775
+first 3 documents:
+{'_id': ObjectId('678ab6aa682da411b38d9552'), 'typ_pogody': 'tęcza', 'typ_obiektu': 'boja'}
+{'_id': ObjectId('678ab6aa682da411b38d9552'), 'typ_pogody': 'częściowe zachmurzenie', 'typ_obiektu': 'boja'}
+{'_id': ObjectId('678ab6aa682da411b38d9552'), 'typ_pogody': 'częściowe zachmurzenie', 'typ_obiektu': 'boja'}
+
+update query time:  1.1780705451965332
+affected documents count:
+UpdateResult({'n': 75142, 'nModified': 75142, 'ok': 1.0, 'updatedExisting': True}, acknowledged=True)
+75142
+
+delete time elapsed:  8.951136350631714
