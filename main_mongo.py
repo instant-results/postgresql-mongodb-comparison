@@ -8,11 +8,6 @@ import time
 
 collection_dictionaries_count_cap = cap_dic
 
-class QueriesOperator():
-
-    def __init__(self):
-        self.get_collection_documents_count_query = ".count()"
-
 
 def insert_operation(data_generator, multiplier=1):
     for coll_name, coll_documents_count_cap in collection_dictionaries_count_cap.items():
