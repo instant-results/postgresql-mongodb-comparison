@@ -15,11 +15,9 @@ DATABASE_CONFIG = {
 
 def insert_operation(data_generator, multiplier=1):
     for table_name in tables_rows_count_cap.keys():
-        #print(table_name)
         for i in range((tables_rows_count_cap[table_name] * multiplier) - data_generator.tables_records_count[table_name]):
-            list = data_generator.records_generators[table_name]()
-            #print(list)
-            queries_operator.insert_into_table(cursor, table_name, list)
+            record = data_generator.records_generators[table_name]()
+            queries_operator.insert_into_table(cursor, table_name, record)
             conn.commit()
 
         data_generator.tables_records_count[table_name] = (

@@ -14,9 +14,8 @@ def insert_operation(data_generator, multiplier=1):
         collection = getattr(db, coll_name)
 
         for i in range((coll_documents_count_cap * multiplier) - data_generator.tables_records_count[coll_name]):
-            list = data_generator.records_generators[coll_name]()
-            #print(list)
-            x = collection.insert_one(list)
+            record = data_generator.records_generators[coll_name]()
+            x = collection.insert_one(record)
 
         data_generator.tables_records_count[coll_name] = collection.count_documents({})
 
